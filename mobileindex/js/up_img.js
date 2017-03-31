@@ -27,7 +27,7 @@ jQuery.fn.extend({
             } else if (window.webkitURL != undefined) {
                 url = window.webkitURL.createObjectURL(file)
             }
-
+            $('.loding').fadeIn();
             var xhr = new XMLHttpRequest();
             $('.loding').fadeIn();
             if (xhr.upload) {
