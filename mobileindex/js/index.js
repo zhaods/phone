@@ -28,6 +28,7 @@ $('.but span.zc').click(function() {
 	$('.p5_mb').attr('src', arr[0]);
 	$('#name').val('');
 	$('#email').val('');
+	$('#phone').val('');
 	$('#textare').val('请保持在24个字以内');
 	$('.frame_pic').attr('src','');
 	$('.picture').attr('src','');

@@ -59,13 +59,13 @@ var turnplate = {
     this.turnplateBtn.click($.proxy(function(errorIndex) {
         var nickname1,email1,show_cookie,iphone;
         show_cookie=getCookie('co_email');
+        iphone=$('#iphone').val();
         if(show_cookie){
           nickname1=getCookie('oName');
           email1=getCookie('co_email');
         }else{
           nickname1=$('#nickname1').val();
           email1=$('#email1').val();
-          iphone=$('#iphone').val();
         }
         console.log('判断后的name   '+ nickname1);
         console.log('判断后的email   '+ email1);
@@ -209,6 +209,7 @@ $(function  () {
   $('.nei_txt_right a.xin').live('click',function  () {
       $('#nickname1').val('');
       $('#email1').val('');
+      $('#iphone').val('');
       oId=parseInt(this.id);
       var cooke_email=getCookie('co_email');
       console.log(cooke_email);
@@ -286,8 +287,11 @@ $(function  () {
       show_zan();
       if(!cooke_email){
         $('#layercon_3').fadeIn();
+        setCookie('co_email',email1);
+        setCookie('oName',nickname1);
       }
   })
+
   //关闭信息框
   $('.xinx_colse').click(function  () {
     $('.xinx').fadeOut();

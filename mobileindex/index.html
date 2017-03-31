@@ -139,7 +139,7 @@
 				</label>
 				<label>
 					<span>手机</span>
-					<input type="text" value="" id="iphone " maxlength="11"/>
+					<input type="text" value="" id="iphone" maxlength="11"/>
 				</label>
 				<label>
 					<span>邮箱</span>
@@ -420,8 +420,8 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-	var root_arr=['蒙牛——见证好营养 一起好吸收','蒙牛——0乳糖 吸收好','蒙牛——没有乳糖非常好'];
-	root_arr=root_arr[Math.floor(Math.random()*3)];
+	var root_arr=['蒙牛——见证好营养 一起好吸收','蒙牛——0乳糖 吸收好','蒙牛——没有乳糖非常好','没有乳糖非常好——蒙牛'];
+	root_arr=root_arr[Math.floor(Math.random()*4)];
 	console.log(root_arr)
 	var mainTitle = root_arr, //分享标题
     mainDesc = "喜大普奔！不花钱竟然可以去美国，还能现场看NBA！"; //分享描述
@@ -554,7 +554,13 @@
 			$(".fxy").fadeIn();
 		}
 	}
+	var mo=function(e){e.preventDefault()};
+	function stop(){
+		document.body.style.overflow='hidden';        
+		document.addEventListener("touchmove",mo,false);//禁止页面滑动
+	}
 	$(function(){
+		stop();
 		$('.p7_warp .p7_left').on('click', function(e) {
 	        e.preventDefault();
 	        swiperNested1.swipePrev();
