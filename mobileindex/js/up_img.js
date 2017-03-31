@@ -27,11 +27,11 @@ jQuery.fn.extend({
             } else if (window.webkitURL != undefined) {
                 url = window.webkitURL.createObjectURL(file)
             }
-
+            $('.loding').fadeIn();
             var xhr = new XMLHttpRequest();
             if (xhr.upload) {
                 // 上传中
-                $('.loding').fadeIn();
+                
                 xhr.upload.addEventListener("progress", function(e) {
                     self.onProgress(file, e.loaded, e.total);
                 }, false);
