@@ -2,9 +2,7 @@ var upUrl = "http://creative.ifeng.com/psm_v1/baseupload/?_c=baseupload&_a=mengn
 //var upUrl ='http://www.chenyi.com/yxcenter/trunk/02src/2014/psm_v1/baseupload/?_c=baseupload&_a=mengniu';
 $(function () {
     $("#add-img").uploadPreview({ Img: "ImgPr", Width: 120, Height: 120 });
-    $("#add-img").click(function  () {
-        $('.loding').fadeIn();
-    })
+   
 });
 jQuery.fn.extend({
     uploadPreview: function (opts) {
@@ -33,6 +31,7 @@ jQuery.fn.extend({
             var xhr = new XMLHttpRequest();
             if (xhr.upload) {
                 // 上传中
+                $('.loding').fadeIn();
                 xhr.upload.addEventListener("progress", function(e) {
                     self.onProgress(file, e.loaded, e.total);
                 }, false);
