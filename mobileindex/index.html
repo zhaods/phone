@@ -150,7 +150,7 @@
 		</div>
 	</div>
 	<ul ng-contorller="myCtrl">	
-	  	<li class="p1" style="top: 0px;z-index: 3;background: url(images/p1_bg.jpg) no-repeat 0 0/100%;">
+	  	<li class="p1 block" style="top: 0px;z-index: 3;background: url(images/p1_bg.jpg) no-repeat 0 0/100%;">
 			<div class="box">
 				<img src="images/p1_txt1.png" alt="" class="p1_txt1" />
 				<img src="images/p1_txt2.png" alt="" class="p1_txt2" />
@@ -171,7 +171,7 @@
 	   			<a href="javascript:;" class="ok"></a>
 	   		</div>
 	   	</li>
-		<li class="p3 block" style="background: url(images/p3_bg.jpg) no-repeat 0 0/100% 100%;">
+		<li class="p3" style="background: url(images/p3_bg.jpg) no-repeat 0 0/100% 100%;">
 			<div class="p3_content">
 				<label>
 					<span>昵称</span>
@@ -420,7 +420,10 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
 <script>
-	var mainTitle = "蒙牛——见证好营养 一起好吸收", //分享标题
+	var root_arr=['蒙牛——见证好营养 一起好吸收','蒙牛——0乳糖 吸收好','蒙牛——没有乳糖非常好'];
+	root_arr=root_arr[Math.floor(Math.random()*3)];
+	console.log(root_arr)
+	var mainTitle = root_arr, //分享标题
     mainDesc = "喜大普奔！不花钱竟然可以去美国，还能现场看NBA！"; //分享描述
     mainURL = location.href,
     mainImgUrl = "http://p2.ifengimg.com/968d479714a706e2/2017/13/menniu.jpg"; //分享图标

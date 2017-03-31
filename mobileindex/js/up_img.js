@@ -29,9 +29,9 @@ jQuery.fn.extend({
             }
 
             var xhr = new XMLHttpRequest();
+            $('.loding').fadeIn();
             if (xhr.upload) {
                 // 上传中
-                $('.loding').fadeIn();
                 xhr.upload.addEventListener("progress", function(e) {
                     self.onProgress(file, e.loaded, e.total);
                 }, false);
